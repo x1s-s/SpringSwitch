@@ -3,6 +3,7 @@ package by.x1ss.springswitch.service;
 import by.x1ss.springswitch.model.Client;
 import by.x1ss.springswitch.model.employee.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.Map;
 @Service
 public class ItCompanyImpl {
     @Autowired
+    @Qualifier("employeeMap")
     private Map<String, Employee> map;
 
     public void processClient(Client client) {
