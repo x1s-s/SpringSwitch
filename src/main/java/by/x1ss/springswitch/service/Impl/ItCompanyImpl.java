@@ -1,4 +1,4 @@
-package by.x1ss.springswitch.service;
+package by.x1ss.springswitch.service.Impl;
 
 import by.x1ss.springswitch.model.Client;
 import by.x1ss.springswitch.model.employee.Employee;

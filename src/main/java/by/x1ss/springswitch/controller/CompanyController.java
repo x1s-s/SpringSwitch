@@ -1,7 +1,7 @@
 package by.x1ss.springswitch.controller;
 
 import by.x1ss.springswitch.model.Client;
-import by.x1ss.springswitch.service.ItCompanyImpl;
+import by.x1ss.springswitch.service.ItCompany;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/company")
 public class CompanyController {
     @Autowired
-    private ItCompanyImpl itCompany;
+    private ItCompany itCompany;
 
     @GetMapping("/process")
-    @SuppressWarnings("rawtypes")
-    public ResponseEntity processClient(@RequestBody Client client) {
+    public ResponseEntity<?> processClient(@RequestBody Client client) {
         itCompany.processClient(client);
         return ResponseEntity.ok().build();
     }
