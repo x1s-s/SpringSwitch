@@ -6,11 +6,9 @@ import by.x1ss.springswitch.model.employee.DefaultEmployee;
 import by.x1ss.springswitch.model.employee.FrontEndDeveloper;
 import by.x1ss.springswitch.service.ItCompany;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
-@Primary
 public class ItCompanySwitchImpl implements ItCompany {
     @Autowired
     private BackEndDeveloper backEndDeveloper;
